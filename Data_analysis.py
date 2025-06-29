@@ -131,6 +131,9 @@ st.caption("This table displays each column in the dataset along with its corres
 column_info = pd.DataFrame(df.dtypes, columns=['Data Type']).reset_index()
 column_info.columns = ['Column Name', 'Data Type']
 
+# Convert 'Data Type' to string
+column_info['Data Type'] = column_info['Data Type'].astype(str)
+
 # Show as a table
 st.dataframe(column_info)
 
@@ -229,12 +232,18 @@ if st.button("Generate Pairplot"):
 st.subheader('Model building')
 
 
+# dups_df = df.copy()
+# dups_df['diagnosis'] = preprocessing.LabelEncoder().fit_transform(dups_df['diagnosis'])
+# result_df = dups_df[['diagnosis']]
+# feature_df = dups_df.drop(columns=['diagnosis'])
+
+
 
 
 dups_df = df.copy()
 result_df  = dups_df[['diagnosis']]
 le1 = preprocessing.LabelEncoder()
-result_df['diagnosis'] =le1.fit_transform(result_df['diagnosis'])
+result_df.loc[:, 'diagnosis'] = le1.fit_transform(result_df['diagnosis'])
 
 feature_df = dups_df.drop(columns=['diagnosis'])
 
