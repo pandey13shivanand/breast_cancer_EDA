@@ -1,0 +1,19 @@
+# 🧬 Breast Cancer EDA & Classification
+
+This project performs Exploratory Data Analysis (EDA) and builds machine learning models to classify tumors as benign or malignant using the Breast Cancer Wisconsin dataset.
+
+## 🔧 Features
+- Data cleaning & visualization
+- Correlation analysis
+- Model building (Logistic Regression, SVM, Random Forest, etc.)
+- Performance evaluation (Accuracy, Confusion Matrix, ROC-AUC)
+
+## 🚀 Tech Stack
+- Python, Streamlit
+- Pandas, NumPy, Seaborn, Matplotlib
+- Scikit-learn
+
+## ▶️ Run Locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py
