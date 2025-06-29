@@ -171,7 +171,7 @@ def highlight_high_corr(val):
     color='background-color:lightgreen' if abs(val)>0.7 or abs(val) < -0.7 else '' 
     return color
 
-styled_corr= corr.style.applymap(highlight_high_corr)
+styled_corr = corr.style.map(highlight_high_corr)
 st.dataframe(styled_corr)
 
 st.markdown('---')
@@ -272,7 +272,7 @@ with st.container():
 
 if 'scaled_data' in st.session_state:
     X = st.session_state['scaled_data']
-    y = result_df
+    y = result_df['diagnosis']
 
     X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.3,shuffle = True, random_state=42)
 
