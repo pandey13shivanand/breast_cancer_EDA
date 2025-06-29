@@ -272,7 +272,7 @@ with st.container():
 
 if 'scaled_data' in st.session_state:
     X = st.session_state['scaled_data']
-    y = result_df['diagnosis']
+    y = result_df['diagnosis'].astype(int)
 
     X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.3,shuffle = True, random_state=42)
 
