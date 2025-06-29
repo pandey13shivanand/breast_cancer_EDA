@@ -131,11 +131,17 @@ st.caption("This table displays each column in the dataset along with its corres
 column_info = pd.DataFrame(df.dtypes, columns=['Data Type']).reset_index()
 column_info.columns = ['Column Name', 'Data Type']
 
-# Convert 'Data Type' to string
-column_info['Data Type'] = column_info['Data Type'].astype(str)
-
-# Show as a table
+column_info = pd.DataFrame({
+    "Column Name": df.columns,
+    "Data Type": df.dtypes.astype(str).values  # convert to string
+})
 st.dataframe(column_info)
+
+# # Convert 'Data Type' to string
+# column_info['Data Type'] = column_info['Data Type'].astype(str)
+
+# # Show as a table
+# st.dataframe(column_info)
 
 
 
