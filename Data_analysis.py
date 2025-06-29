@@ -323,9 +323,9 @@ if 'scaled_data' in st.session_state:
             st.pyplot(fig)
 
 with st.expander('Final words!!'):
-    st.write("""* The machine learning models applied to the breast cancer dataset have demonstrated exceptional performance across the board. 
+     st.write("""* The machine learning models applied to the breast cancer dataset have demonstrated exceptional performance across the board. 
                 Every classifier tested — including Logistic Regression, Random Forest, SVM, KNN, Decision Tree, and Naive Bayes — consistently 
-                achieved over 95'\%' accuracy, with the best models reaching 99'\%' on training data and 98'\%' on testing data, indicating no overfitting.\n"""
+                achieved over 95% accuracy, with the best models reaching 99% on training data and 98% on testing data, indicating no overfitting.\n"""
                 """* Further analysis through the classification report showed high precision, recall, and F1-scores for both malignant and benign classes,
                 ensuring balanced and reliable predictions. The ROC-AUC score of 1.00 and the near-perfect ROC curve confirm the model's excellent ability 
                 to differentiate between the two classes, making it a powerful tool for diagnostic support.\n"""
