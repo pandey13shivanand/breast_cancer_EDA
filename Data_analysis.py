@@ -166,7 +166,7 @@ st.caption("Correlation is a statistical method used to measure the strength and
 "more variables.In this step, we will analyze the correlation among the features in the dataset to " \
 "understand how they are related to each other.")
 
-corr=df.corr()
+corr = df.corr(numeric_only=True)
 def highlight_high_corr(val):
     color='background-color:lightgreen' if abs(val)>0.7 or abs(val) < -0.7 else '' 
     return color
